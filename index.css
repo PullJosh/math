@@ -1,0 +1,20 @@
+.Slideshow {
+  position: relative;
+  max-width: 1440px;
+}
+.Slideshow::before {
+  content: "";
+  display: block;
+
+  /* Preserve aspect ratio of slide + constant height of controls */
+  padding-top: 56.25%; /* 16:9 */
+  height: 29px;
+}
+
+.Slideshow__iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
